@@ -1,1 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101014"><meta name="description" content="GaraTV — News that matters. Kenya, Africa and the world.">
+<title>GaraTV | News That Matters</title>
+<link rel="icon" href="assets/garatv-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<div class="announcement"><span>INDEPENDENT DIGITAL JOURNALISM</span><span id="date-line"></span><span class="live-dot">● &nbsp;NEWSROOM ONLINE</span></div>
+<header class="header">
+  <a class="brand" href="#home" aria-label="GaraTV home"><span class="brand-g"><i></i></span><span class="brand-word">Gara<span>TV</span></span></a>
+  <nav class="desktop-nav" aria-label="Main navigation">
+    <a class="selected" href="#home">Home</a><a href="#latest">Latest</a><a href="#kenya">Kenya</a><a href="#africa">Africa</a><a href="#world">World</a><a href="#business">Business</a><a href="#sports">Sports</a><a href="#watch">Watch</a>
+  </nav>
+  <div class="header-tools"><button class="icon-btn" id="search-toggle" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><button class="btn btn-dark btn-small" id="account-open">Sign in</button><button class="mobile-menu" id="menu-toggle" aria-label="Open menu">☰</button></div>
+</header>
+<nav class="mobile-nav" id="mobile-nav"><a href="#latest">Latest</a><a href="#kenya">Kenya</a><a href="#africa">Africa</a><a href="#world">World</a><a href="#business">Business</a><a href="#sports">Sports</a><a href="#watch">Watch</a><a href="#newsletter">Newsletter</a></nav>
+<div class="search-panel" id="search-panel"><input id="search-input" placeholder="Search stories, topics or places…" aria-label="Search news"><button class="btn btn-red" id="search-submit">Search</button></div>
+<div class="breaking"><b><span class="pulse"></span> BREAKING</b><div class="ticker-text">GaraTV brings you verified local, national and international news — stories that matter to you.</div><a href="#latest">Explore <span>→</span></a></div>
 
+<main id="home">
+<section class="hero wrap">
+  <div class="hero-main">
+    <div class="section-kicker"><span>THE GARA BRIEFING</span><i></i><span id="hero-date">TODAY</span></div>
+    <div class="hero-image"><div class="hero-image-overlay"></div><div class="hero-image-label">GARA TV <b>NEWSROOM</b></div><div class="hero-monogram">G<span>▶</span></div></div>
+    <div class="story-meta"><span class="tag">EDITOR'S DESK</span><span>INDEPENDENT • VERIFIED • RELEVANT</span></div>
+    <h1>News that matters.<br><em>Voices that count.</em></h1>
+    <p class="hero-dek">From the heart of Kenya to the wider world, GaraTV brings you the stories shaping our communities, our continent and our future.</p>
+    <a class="text-link" href="#latest">Explore the newsroom <b>↗</b></a>
+  </div>
+  <aside class="hero-aside">
+    <div class="aside-heading"><h2>Top stories</h2><span>THE EDITOR'S PICK</span></div>
+    <div id="top-stories" class="top-stories">
+      <article class="top-story"><small>KENYA · NEWS</small><h3>Stories from every corner deserve to be heard.</h3><p>Our newsroom is building a trusted home for local reporting.</p></article>
+      <article class="top-story"><small>AFRICA · PERSPECTIVE</small><h3>A continent connected by stories, ideas and opportunity.</h3><p>Follow the developments shaping Africa.</p></article>
+      <article class="top-story"><small>WORLD · BRIEFING</small><h3>Understand the events changing our world.</h3><p>International coverage with context.</p></article>
+    </div>
+    <div class="contribute-card"><span class="eyebrow-light">HAVE A STORY?</span><h3>Your community.<br>Your story.</h3><p>Anyone can apply to contribute. Our editorial team reviews every submission.</p><button class="btn btn-white" data-open="contributor">Become a contributor <span>→</span></button></div>
+  </aside>
+</section>
+
+<section class="wrap section" id="latest">
+  <div class="section-head"><div><span class="eyebrow">THE NEWSROOM</span><h2>Latest stories</h2></div><div class="filter-row"><button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Kenya">Kenya</button><button class="filter" data-filter="Africa">Africa</button><button class="filter" data-filter="World">World</button><button class="filter" data-filter="Business">Business</button><button class="filter" data-filter="Sports">Sports</button></div></div>
+  <div class="news-grid" id="news-grid">
+    <article class="news-card feature-card"><div class="card-art art-red"><span>G</span></div><div class="card-copy"><small>GARA TV · EDITORIAL</small><h3>Independent reporting begins with listening to the people.</h3><p>GaraTV is building a newsroom that values accuracy, fairness and public interest.</p><a href="#about" class="text-link">Read more ↗</a></div></article>
+    <article class="news-card"><div class="card-art art-dark"><span>KENYA</span></div><div class="card-copy"><small>KENYA · COMMUNITY</small><h3>Local stories, national significance.</h3><p>Discover the people and events shaping our communities.</p><a href="#about" class="text-link">Read more ↗</a></div></article>
+    <article class="news-card"><div class="card-art art-grey"><span>WORLD</span></div><div class="card-copy"><small>WORLD · BRIEFING</small><h3>Global developments with local context.</h3><p>Follow the issues that connect us to the wider world.</p><a href="#about" class="text-link">Read more ↗</a></div></article>
+  </div>
+  <div class="center-action"><span id="feed-status">GaraTV newsroom feed</span><button class="btn btn-outline" id="refresh-feed">Refresh stories ↻</button></div>
+</section>
+
+<section class="wrap section sections-area">
+  <div class="section-head"><div><span class="eyebrow">FOLLOW WHAT MATTERS</span><h2>Explore our coverage</h2></div><p class="muted">Local insight. National relevance. Global perspective.</p></div>
+  <div class="coverage-grid">
+    <a id="kenya" class="coverage c-kenya" href="#latest" data-coverage="Kenya"><span>01 / NATIONAL</span><b>Kenya</b><i>Counties, governance, community and public life ↗</i></a>
+    <a id="africa" class="coverage c-africa" href="#latest" data-coverage="Africa"><span>02 / CONTINENT</span><b>Africa</b><i>People, policy, enterprise and ideas ↗</i></a>
+    <a id="world" class="coverage c-world" href="#latest" data-coverage="World"><span>03 / GLOBAL</span><b>World</b><i>International news and analysis ↗</i></a>
+    <a id="business" class="coverage c-business" href="#latest" data-coverage="Business"><span>04 / ECONOMY</span><b>Business</b><i>Markets, enterprise and opportunity ↗</i></a>
+    <a id="sports" class="coverage c-sports" href="#latest" data-coverage="Sports"><span>05 / SPORT</span><b>Sports</b><i>Local, national and international sport ↗</i></a>
+    <a id="culture" class="coverage c-culture" href="#latest" data-coverage="Culture"><span>06 / CULTURE</span><b>Culture &amp; Life</b><i>Arts, entertainment, health and society ↗</i></a>
+  </div>
+</section>
+
+<section class="watch-band" id="watch"><div class="wrap watch-inner"><div><span class="eyebrow-light">GARA TV BROADCAST</span><h2>Watch. Listen.<br><em>Understand.</em></h2><p>Video reports, interviews, explainers and programmes from the GaraTV newsroom.</p></div><div class="play-tile"><span>▶</span><small>GARA TV</small></div><a class="btn btn-white" id="youtube-link" href="https://www.youtube.com/" target="_blank" rel="noopener">Visit our channel ↗</a></div></section>
+
+<section class="newsletter-section" id="newsletter"><div class="wrap newsletter-inner"><div><span class="eyebrow">THE WEEKLY GARA</span><h2>The week, <em>well informed.</em></h2><p>Get a considered selection of Kenya, Africa and world stories delivered to your inbox every week.</p></div><form id="newsletter-form" class="newsletter-form"><label for="newsletter-email">Your email address</label><div class="input-action"><input id="newsletter-email" type="email" placeholder="you@example.com" required><button class="btn btn-red">Subscribe</button></div><small>Free to subscribe. Confirm by email. Unsubscribe whenever you wish.</small><p class="form-feedback" id="newsletter-feedback" role="status"></p></form></div></section>
+
+<section class="wrap business-promo"><div class="promo-copy"><span class="eyebrow-light">OUR COMMERCE PARTNER</span><h2>Discover more.<br><em>Shop local.</em></h2><p>Explore products and local merchants through BUSIAN. Sponsored offers are clearly identified and kept separate from independent reporting.</p><a class="btn btn-white" id="busian-link" href="#" target="_blank" rel="noopener">Explore BUSIAN ↗</a></div><div class="promo-mark"><span>B</span><small>BUSIAN MARKETPLACE</small></div></section>
+
+<section class="wrap submit-strip"><div><span class="eyebrow">COMMUNITY CONTRIBUTION</span><h2>Be part of the story.</h2><p>Have information, photographs or a community story? Apply to join the GaraTV contributor network.</p></div><button class="btn btn-red" data-open="contributor">Apply to contribute ↗</button></section>
+</main>
+
+<footer class="footer"><div class="wrap footer-grid"><div class="footer-about"><a class="brand brand-footer" href="#home"><span class="brand-g"><i></i></span><span class="brand-word">Gara<span>TV</span></span></a><p>News That Matters.<br>Independent journalism. Community voices. Global perspective.</p></div><div><b>Explore</b><a href="#kenya">Kenya</a><a href="#africa">Africa</a><a href="#world">World</a><a href="#business">Business</a><a href="#sports">Sports</a></div><div><b>Participate</b><a href="#newsletter">Weekly newsletter</a><a href="#submit">Submit a story</a><a href="#about" data-open="contributor">Become a contributor</a><a href="mailto:newsroom@garatv.com">Contact newsroom</a></div><div><b>GaraTV</b><a href="#about">About us</a><a href="#standards">Editorial standards</a><a href="#privacy">Privacy</a><a href="#advertise">Advertise with us</a></div></div><div class="wrap footer-bottom"><span>© <span id="year"></span> GaraTV. All rights reserved.</span><span>News That Matters. <b>●</b></span></div></footer>
+
+<div class="modal-backdrop" id="modal-backdrop" aria-hidden="true"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" id="modal-close" aria-label="Close">×</button><div id="modal-content"></div></section></div>
+<div class="toast" id="toast" role="status"></div>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>
